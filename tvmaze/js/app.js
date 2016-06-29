@@ -4,9 +4,37 @@
   // Usamos modo estricto (nuevo in ECMA5): http://www.w3schools.com/js/js_strict.asp
   'use strict';
 
-  // Esperamos a que la página se cargue para poner la fecha de hoy
-  $(document).ready(function() {
+   // Donde consultar las pelis. Por defecto España
+  var seriesUrl = "http://api.tvmaze.com/schedule?country=ES";
 
+  // Funcion para pedir las series
+  function drawSeries(url) {
+    // Hacemos petición AJAX para obtener las películas de la API
+    $.getJSON(seriesUrl, function(result) {
+
+      var list = $("<ul>");
+
+      // result será un array y cada elemento una peli
+      $.each(result, function(i, field) {
+        var serie = $("<li>");
+
+        var link = $("<a />", {
+          href: field.url,
+          text: "S" + field.season + "E" + field.number + " de " + field.show.name
+        });
+
+        serie.html(link);
+
+        list.append(serie);
+
+      });
+
+      $("#series").html(list);
+    });
+  }
+
+  // Función para generar la fecha de hoy como una cadena formateada al estilo español
+  function getTodayDate() {
     // Formatea la fecha de hoy (sacado de http://stackoverflow.com/a/4929629/593722)
     var today = new Date();
     var dd = today.getDate();
@@ -23,35 +51,33 @@
 
     today = dd + '/' + mm + '/' + yyyy;
 
-    // La añade en el span
-    $("#fechahoy").text(today)
+    return today;
+  }
+
+  // Manejadores de eventos
+  $("#flag-es").on('click', function(event) {
+
+    $("#series").text("Cargando series España...");
+    seriesUrl = "http://api.tvmaze.com/schedule?country=ES";
+    drawSeries(seriesUrl);
+  });
+
+  $("#flag-us").on('click', function(event) {
+    $("#series").text("Cargando series USA...");
+
+    seriesUrl = "http://api.tvmaze.com/schedule?country=US";
+    drawSeries(seriesUrl);
   });
 
 
-  // Hacemos petición AJAX para obtener las películas de la API
-  $.getJSON("http://api.tvmaze.com/schedule?country=US", function(result) {
+  // Por aqui empezamos. Esto se ejecuta al cargar la pagina
+  $(document).ready(function() {
 
-    var list = $("<ul>");
-
-    // result será un array y cada elemento una peli
-    $.each(result, function(i, field) {
-      var serie = $("<li>");
-
-      var link = $("<a />", {
-        href: field.url,
-        text: "S" + field.season + "E" + field.number + " de " + field.show.name
-      });
-
-      serie.html(link);
-
-      list.append(serie);
-
-    });
-
-    $("#series").html(list);
+    // Pone la fecha de hoy y dibuja la lista de series
+    $("#fechahoy").text(getTodayDate);
+    drawSeries(seriesUrl);
 
   });
-
 
 
 })($);
