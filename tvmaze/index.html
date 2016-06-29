@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ejercicios JavaScript</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/flags.css">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar navbar-inverse" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#/">Ejercicios JavaScript</a>
+                </div>
+            </nav>
+        </header>
+
+        <section class="container-fluid" id="main">
+
+            <h3>Ejemplo API <a href="http://www.tvmaze.com/api">TVMaze</a></h3>
+
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Series para ver hoy <span id="fechahoy"></span> en la TV <a href="#"><img src="img/blank.gif" class="flag flag-es" alt="Spain" /></a> <a href="#"><img src="img/blank.gif" class="flag flag-us" alt="US" /></a></h3>
+                </div>
+                <div class="panel-body" id="series">
+                    Cargando datos...
+                </div>
+            </div>
+
+
+        </section>
+
+        <footer class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container-fluid">
+                <p class="text-muted"><a href="https://github.com/jorgeas80">Jorge Arévalo</a></p>
+            </div>
+        </footer>
+
+        <script src="js/vendor/jquery-1.12.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
