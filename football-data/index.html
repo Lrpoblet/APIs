@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ejercicios JavaScript</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar navbar-inverse" role="navigation">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#/">Ejercicios JavaScript</a>
+                </div>
+            </nav>
+        </header>
+
+        <section class="container" id="main">
+
+            <h3>Ejemplo API <a href="http://api.football-data.org/index">Football-Data</a></h3>
+
+            <h4 id="title"></h4>
+
+            <div role="tabpanel">
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#grupoa" aria-controls="grupoa" role="tab" data-toggle="tab">Grupo A</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#grupob" aria-controls="grupob" role="tab" data-toggle="tab">Grupo B</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#grupoc" aria-controls="grupoc" role="tab" data-toggle="tab">Grupo C</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#grupod" aria-controls="grupod" role="tab" data-toggle="tab">Grupo D</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#grupoe" aria-controls="grupoe" role="tab" data-toggle="tab">Grupo E</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#grupof" aria-controls="grupof" role="tab" data-toggle="tab">Grupo F</a>
+                    </li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="grupoa">
+                        <table id="A" class="table table-condensed table-hover table-striped table-bordered table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Equipo</th>
+                                    <th>Posición</th>
+                                    <th>Goles a favor</th>
+                                    <th>Goles en contra</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="loading-tablea" colspan="4" class="alert alert-info">Cargando datos...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="grupob">
+                        <table id="B" class="table table-condensed table-hover table-striped table-bordered table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Equipo</th>
+                                    <th>Posición</th>
+                                    <th>Goles a favor</th>
+                                    <th>Goles en contra</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="loading-tableb" colspan="4" class="alert alert-info">Cargando datos...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="grupoc">
+                        <table id="C" class="table table-condensed table-hover table-striped table-bordered table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Equipo</th>
+                                    <th>Posición</th>
+                                    <th>Goles a favor</th>
+                                    <th>Goles en contra</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="loading-tablec" colspan="4" class="alert alert-info">Cargando datos...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="grupod">
+                        <table id="D" class="table table-condensed table-hover table-striped table-bordered table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Equipo</th>
+                                    <th>Posición</th>
+                                    <th>Goles a favor</th>
+                                    <th>Goles en contra</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="loading-tabled" colspan="4" class="alert alert-info">Cargando datos...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="grupoe">
+                        <table id="E" class="table table-condensed table-hover table-striped table-bordered table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Equipo</th>
+                                    <th>Posición</th>
+                                    <th>Goles a favor</th>
+                                    <th>Goles en contra</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="loading-tablee" colspan="4" class="alert alert-info">Cargando datos...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="grupof">
+                        <table id="F" class="table table-condensed table-hover table-striped table-bordered table-responsive">
+                            <thead>
+                                <tr>
+                                    <th>Equipo</th>
+                                    <th>Posición</th>
+                                    <th>Goles a favor</th>
+                                    <th>Goles en contra</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td id="loading-tablef" colspan="4" class="alert alert-info">Cargando datos...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <footer class="navbar navbar-inverse navbar-fixed-bottom">
+            <div class="container-fluid">
+                <p class="text-muted"><a href="https://github.com/jorgeas80">Jorge Arévalo</a></p>
+            </div>
+        </footer>
+
+        <script src="js/vendor/jquery-1.12.1.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
